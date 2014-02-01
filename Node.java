@@ -31,19 +31,19 @@ public class Node {
 		return this.name;
 	}
 
-	
 	public void depth_first(int level) {
 		level++;
 		for (int i = 0; i < this.numberOfNodes; i++) { // loop over node array
-			for (int j = 0; j < level; j++) {         // print blank spaces to indicate depth level
+			for (int j = 0; j < level; j++) { // print blank spaces to indicate
+												// depth level
 				System.out.print(" ");
 			}
 			System.out.println(this.nodes[i].getName());
 			this.nodes[i].depthLevel = level;
-			if (this.nodes[i].numberOfNodes > 0) {  
+			if (this.nodes[i].numberOfNodes > 0) {
 				this.nodes[i].depth_first(this.nodes[i].depthLevel);
 			}
-			
+
 		}
 	}
 }

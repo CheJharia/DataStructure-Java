@@ -9,14 +9,12 @@
 
 package stringTree;
 
-import com.sun.swing.internal.plaf.basic.resources.basic;
-
-public class Root extends Node{
+public class Root extends Node {
 
 	public Root(String name) {
 		super(name);
 	}
-	
+
 	public void add(Node... nodes) {
 		super.add(nodes);
 	}
@@ -25,10 +23,10 @@ public class Root extends Node{
 		System.out.println(this.name);
 		super.depth_first(level);
 	}
-	
+
 	public static void main(String[] args) {
-		
-//		Initialisation of tree
+
+		// Initialisation of tree
 		Node b = new Node("b");
 		Node e = new Node("e");
 		Node c = new Node("c");
@@ -36,14 +34,13 @@ public class Root extends Node{
 		Node f = new Node("f");
 		Node g = new Node("g");
 		Root root = new Root("a");
-		root.add(b,e);
+		root.add(b, e);
 		b.add(c, d);
 		e.add(f, g);
 
-//		depth_first 
+		// depth_first
 		root.depth_first(root.depthLevel);
-		
-		
+
 	}
 
 }
