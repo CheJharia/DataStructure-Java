@@ -17,8 +17,8 @@ public class Root extends Node{
 		super(name);
 	}
 	
-	public void add(Node node) {
-		super.add(node);
+	public void add(Node... nodes) {
+		super.add(nodes);
 	}
 
 	public void depth_first(int level) {
@@ -29,66 +29,16 @@ public class Root extends Node{
 	public static void main(String[] args) {
 		
 //		Initialisation of tree
-//		Node b = new Node("b");
-//		Node e = new Node("e");
-//		Node c = new Node("c");
-//		Node d = new Node("d");
-//		Node f = new Node("f");
-//		Node g = new Node("g");
-//		Root root = new Root("a");
-//		root.add(b);
-//		root.add(e);
-//		b.add(c);
-//		b.add(d);
-//		e.add(f);
-//		e.add(g);
-		Root root = new Root("a");
 		Node b = new Node("b");
-		Node c = new Node("b");
-		Node d = new Node("b");
-		Node e = new Node("b");
-		root.add(b);
-		root.add(c);
-		root.add(d);
-		root.add(e);
-		
-		Node f = new Node("c");
-		Node g = new Node("c");
-		Node h = new Node("c");
-		Node i = new Node("c");
-		b.add(f);
-		b.add(g);
-		b.add(h);
-		b.add(i);
-		
-		Node j = new Node("d");
-		Node k = new Node("d");
-		Node l = new Node("d");
-		Node m = new Node("d");
-		c.add(j);
-		c.add(k);
-		c.add(l);
-		c.add(m);
-		
-		Node n = new Node("e");
-		Node o = new Node("e");
-		Node p = new Node("e");
-		Node q = new Node("e");
-		d.add(n);
-		d.add(o);
-		d.add(p);
-		d.add(q);
-		
-		Node r = new Node("f");
-		Node s = new Node("f");
-		Node t = new Node("f");
-		Node u = new Node("f");
-		e.add(r);
-		e.add(s);
-		e.add(t);
-		e.add(u);
-
-		
+		Node e = new Node("e");
+		Node c = new Node("c");
+		Node d = new Node("d");
+		Node f = new Node("f");
+		Node g = new Node("g");
+		Root root = new Root("a");
+		root.add(b,e);
+		b.add(c, d);
+		e.add(f, g);
 
 //		depth_first 
 		root.depth_first(root.depthLevel);
