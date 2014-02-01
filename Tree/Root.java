@@ -7,7 +7,6 @@
  * and each tree node may contain at most 10 other nodes
  */
 
-package stringTree;
 
 public class Root extends Node {
 

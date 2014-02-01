@@ -7,8 +7,6 @@
  * and each tree node may contain at most 10 other nodes
  */
 
-package stringTree;
-
 public class Node {
 	protected String name;
 	protected int numberOfNodes = 0; // nodes counter
