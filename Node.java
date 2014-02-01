@@ -20,9 +20,11 @@ public class Node {
 		this.name = name;
 	}
 
-	public void add(Node node) {
-		this.nodes[this.numberOfNodes] = node;
-		numberOfNodes++;
+	public void add(Node... nodes) {
+		for (Node node : nodes) {
+			this.nodes[this.numberOfNodes] = node;
+			numberOfNodes++;
+		}
 	}
 
 	public String getName() {
